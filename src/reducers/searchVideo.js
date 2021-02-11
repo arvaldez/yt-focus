@@ -1,9 +1,8 @@
-export default (state = {}, action) => {
-	switch (action.type) {
-		case 'SEARCH_VIDEO':
-			return {...state, term: action.payload};
-
-		default:
-			return state;
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (state = null, action) => {
+	if (action.type === 'SEARCH_VIDEO') {
+		return action.payload;
 	}
+
+	return state;
 };
