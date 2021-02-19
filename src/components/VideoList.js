@@ -30,7 +30,8 @@ class VideoList extends Component {
 
 	selectVideo = (video) => {
 		let action = actionCreators.selectVideo(video);
-		this.props.dispatch(action);
+		this.props.dispatch( action );
+		
 	};
 	renderList() {
 		if (!this.props.videos.items) {
@@ -69,7 +70,6 @@ class VideoList extends Component {
 	render() {
 		return (
 			<div>
-				{' '}
 				<div>{this.renderContent()}</div>{' '}
 			</div>
 		);
